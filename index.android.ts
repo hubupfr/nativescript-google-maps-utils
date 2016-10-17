@@ -20,6 +20,8 @@ const HeatmapTileProvider = com.google.maps.android.heatmaps.HeatmapTileProvider
 
 const TileOverlayOptions = com.google.android.gms.maps.model.TileOverlayOptions;
 
+const SphericalUtil = com.google.maps.android.SphericalUtil;
+
 
 const debugNull = function(...args: Array<any>): void { };
 
@@ -103,4 +105,11 @@ export function setupHeatmap(mapView: MapView, positions: Array<Position>, confi
   }
 
   return config;
+}
+
+
+export function computeHeading(from:any, to:any) :number {
+    let fromLatLng = new com.google.android.gms.maps.model.LatLng(from.lat, from.lng);
+    let toLatLng = new com.google.android.gms.maps.model.LatLng(to.lat, to.lng);
+    return SphericalUtil.computeHeading(fromLatLng, toLatLng);
 }

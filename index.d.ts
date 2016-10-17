@@ -1,7 +1,7 @@
 
 declare module "nativescript-google-maps-utils" {
 
-    import { MapView, Position, Marker } from "nativescript-google-maps-sdk";
+    import { MapView, Position, Marker, LatLng } from "nativescript-google-maps-sdk";
 
     export function enableDebug(debugFn?: ((...args: Array<any>) => any)): void;
     export function disableDebug(): void;
@@ -14,4 +14,5 @@ declare module "nativescript-google-maps-utils" {
     }
 
     export function setupHeatmap(mapView: MapView, positions: Array<Position>, config?: IHeatmapConfig) : IHeatmapConfig;
+    export function heading(from:any, to:any) : number;
 }
