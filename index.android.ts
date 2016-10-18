@@ -113,3 +113,11 @@ export function computeHeading(from:any, to:any) :number {
     let toLatLng = new com.google.android.gms.maps.model.LatLng(to.lat, to.lng);
     return SphericalUtil.computeHeading(fromLatLng, toLatLng);
 }
+
+
+export function interpolate(from:any, to:any, fraction:number) : any {
+
+    let fromLatLng = new com.google.android.gms.maps.model.LatLng(from.lat, from.lng);
+    let toLatLng = new com.google.android.gms.maps.model.LatLng(to.lat, to.lng);
+    return SphericalUtil.interpolate(fromLatLng, toLatLng, fraction);
+}

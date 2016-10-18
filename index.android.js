@@ -86,4 +86,10 @@ function computeHeading(from, to) {
     return SphericalUtil.computeHeading(fromLatLng, toLatLng);
 }
 exports.computeHeading = computeHeading;
+function interpolate(from, to, fraction) {
+    var fromLatLng = new com.google.android.gms.maps.model.LatLng(from.lat, from.lng);
+    var toLatLng = new com.google.android.gms.maps.model.LatLng(to.lat, to.lng);
+    return SphericalUtil.interpolate(fromLatLng, toLatLng, fraction);
+}
+exports.interpolate = interpolate;
 //# sourceMappingURL=index.android.js.map

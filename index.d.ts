@@ -15,4 +15,5 @@ declare module "nativescript-google-maps-utils" {
 
     export function setupHeatmap(mapView: MapView, positions: Array<Position>, config?: IHeatmapConfig) : IHeatmapConfig;
     export function heading(from:any, to:any) : number;
+    export function interpolate(from:any, to:any, fraction:number) : any;
 }
